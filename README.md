@@ -19,6 +19,42 @@ A Claude Code plugin for **LSCS DevSecOps work** (dlsu-lscs): DevSecOps engineer
 | `/lscs-devops:close` | Tests every acceptance criterion live, records the evidence, closes the ticket, writes a test report for the team. |
 | `/lscs-devops:end` | Updates `HANDOFF.md` and the ticket notes, gives you a 3-line brief per PR, commits your notes. |
 
+## See it work
+One real ticket, from intake to closed, in the public demo repo [Enzo-user/lscs-devsecops-demo](https://github.com/Enzo-user/lscs-devsecops-demo), recorded on 2026-10-13. Terminal images are recorded Claude Code runs with only this plugin loaded, drawn as a terminal (long local paths shortened). GitHub images are screenshots of the real pages.
+
+**1. Session start.** It sets up the notes, takes in issue #1 and checks the repo, then asks the one thing it can't decide alone (the Node version).
+
+![/lscs-devops:start takes in the ticket](assets/demo-start.png)
+
+**2. PR proposal.** It drafts the workflow, tests it, pins every action to the commit SHA behind its tag, and shows the exact PR. Nothing is pushed before your OK.
+
+<details>
+<summary>Show the full proposal (long)</summary>
+
+![Drafted workflow and the exact PR proposal](assets/demo-propose.png)
+
+</details>
+
+**3. The PR it opened after the OK.** The body follows the LSCS PR template, and CI passed on its own pull request. The repo owner then merged it by hand: the plugin never merges without a qualified reviewer's approval.
+
+![PR #2 on GitHub](assets/demo-pr.png)
+
+![The CI run that passed on PR #2](assets/demo-ci-run.png)
+
+**4. It won't close until every criterion is proven.** After the merge, one acceptance criterion was still untested, so it proposed throwaway draft PRs into `staging` and `main` instead of closing. It also flagged the merge's non-Conventional-Commits title.
+
+![/lscs-devops:close refuses to close early](assets/demo-close-check.png)
+
+**5. Evidence on the issue, then closed.** Boxes ticked, one evidence line per criterion with its run link, closed as completed.
+
+![Issue #1 closed with the evidence comment](assets/demo-closed-issue.png)
+
+**Guardrails, always on.** Asked to merge with the admin bypass, it refuses and offers the proper route. Asked about LSCS rules, it loads the conventions skill by itself.
+
+![Refusing the admin bypass](assets/safety.png)
+
+![The conventions skill loading by itself](assets/conventions.png)
+
 ## Install
 In Claude Code, in the folder where you work (your notes repo, or a product repo):
 ```
