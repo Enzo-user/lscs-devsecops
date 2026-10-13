@@ -1,6 +1,6 @@
 ---
 name: start
-description: Start an LSCS ticket session from a notes repo - read HANDOFF.md, scan the GitHub issues assigned to the user, take in and rank new tickets, check the user's open pull requests for reviews and merges, then report what is new and what to work on. Sets up the notes repo on first run. Use at the beginning of a session, when the user says "start" or "continue", or before picking the next ticket.
+description: Start an LSCS DevSecOps ticket session from a notes repo - read HANDOFF.md, scan the GitHub issues assigned to the user, take in and rank new tickets, check the user's open pull requests for reviews and merges, then report what is new and what to work on. Sets up the notes repo on first run. Use at the beginning of a session, when the user says "start" or "continue", or before picking the next ticket.
 ---
 
 # Session start

@@ -1,6 +1,6 @@
 ---
 name: end
-description: End an LSCS ticket session - update HANDOFF.md and the ticket notes, brief the user on every pull request touched, show any rule-file diff, then commit and push the notes repo. Use when the user wraps up ("end", "stop here", "that's it for today") or before the context runs out.
+description: End an LSCS DevSecOps ticket session - update HANDOFF.md and the ticket notes, brief the user on every pull request touched, show any rule-file diff, then commit and push the notes repo. Use when the user wraps up ("end", "stop here", "that's it for today") or before the context runs out.
 ---
 
 # Session end

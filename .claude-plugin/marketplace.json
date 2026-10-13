@@ -1,12 +1,12 @@
 {
   "name": "lscs",
   "owner": { "name": "Enzo-user" },
-  "description": "Claude Code plugins for LSCS (dlsu-lscs) engineering work.",
+  "description": "Claude Code plugins for LSCS (dlsu-lscs) DevSecOps work.",
   "plugins": [
     {
       "name": "lscs-devops",
       "source": "./plugins/lscs-devops",
-      "description": "LSCS engineering workflow for Claude Code: always-on safety rules, the LSCS contribution conventions, and a ticket notebook (start, pr, close, end)."
+      "description": "For LSCS DevSecOps work: always-on safety rules, the LSCS contribution conventions, and a ticket notebook (start, pr, close, end) for DevSecOps engineers and their tickets."
     }
   ]
 }

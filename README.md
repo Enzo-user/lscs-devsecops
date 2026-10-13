@@ -1,9 +1,13 @@
 # lscs-claude
 
-A Claude Code plugin for LSCS (dlsu-lscs) engineering work. It gives Claude three things:
+A Claude Code plugin for **LSCS DevSecOps work** (dlsu-lscs): DevSecOps engineers and the DevSecOps tickets they're assigned, such as CI/CD workflows, Dockerfiles and Compose files, branch protection and rulesets, secrets and repository setup. It gives Claude three things:
 - the org's contribution rules;
 - safety rules for letting Claude act on GitHub;
 - a notebook workflow for working through your assigned tickets across sessions.
+
+## Who it's for
+- **For:** LSCS DevSecOps engineers working on DevSecOps-facing tickets and PRs, where the Senior DevSecOps is the primary reviewer (CCG §10, §16).
+- **Not for:** general frontend or backend contribution. The conventions apply to everyone, but the review routing, safety rules and ticket notebook are set up for DevSecOps work. Frontend and backend PRs go to the Project Tech Lead (CCG §10).
 
 ## What you get
 | Part | What it does |

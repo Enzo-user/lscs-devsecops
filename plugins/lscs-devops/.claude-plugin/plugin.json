@@ -1,7 +1,7 @@
 {
   "name": "lscs-devops",
-  "version": "0.1.0",
-  "description": "LSCS engineering workflow for Claude Code: always-on safety rules, the LSCS contribution conventions, and a ticket notebook (start, pr, close, end).",
+  "version": "0.1.1",
+  "description": "For LSCS DevSecOps work: always-on safety rules, the LSCS contribution conventions, and a ticket notebook (start, pr, close, end) for DevSecOps engineers and their tickets.",
   "author": { "name": "Enzo-user" },
   "repository": "https://github.com/Enzo-user/lscs-claude",
   "license": "MIT",
