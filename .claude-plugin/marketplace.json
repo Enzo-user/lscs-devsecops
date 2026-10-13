@@ -4,8 +4,8 @@
   "description": "Claude Code plugins for LSCS (dlsu-lscs) DevSecOps work.",
   "plugins": [
     {
-      "name": "lscs-devops",
-      "source": "./plugins/lscs-devops",
+      "name": "lscs-devsecops",
+      "source": "./plugins/lscs-devsecops",
       "description": "For LSCS DevSecOps work: always-on safety rules, the LSCS contribution conventions, and a ticket notebook (start, pr, close, end) for DevSecOps engineers and their tickets."
     }
   ]

@@ -39,7 +39,7 @@ TODO. Numbered steps; mark each step's owner (Claude, <me>, team).
 | Acceptance item | Evidence (run / commit / API URL, date) | Screenshot (`evidence/`) |
 |---|---|---|
 
-Closing checklist (`/lscs-devops:close`):
+Closing checklist (`/lscs-devsecops:close`):
 - [ ] PR merged by <who> · YYYY-MM-DD (if by Claude: my OK on the merge proposal, date)
 - [ ] every acceptance item tested live; evidence above; screenshots shown to me
 - [ ] boxes ticked on the issue · evidence comment <url>
