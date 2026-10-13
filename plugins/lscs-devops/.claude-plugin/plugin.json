@@ -1,9 +1,9 @@
 {
   "name": "lscs-devops",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "For LSCS DevSecOps work: always-on safety rules, the LSCS contribution conventions, and a ticket notebook (start, pr, close, end) for DevSecOps engineers and their tickets.",
   "author": { "name": "Enzo-user" },
-  "repository": "https://github.com/Enzo-user/lscs-claude",
+  "repository": "https://github.com/Enzo-user/lscs-devsecops",
   "license": "MIT",
   "keywords": ["lscs", "devops", "github", "workflow"]
 }

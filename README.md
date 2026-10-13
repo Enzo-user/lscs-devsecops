@@ -1,4 +1,4 @@
-# lscs-claude
+# lscs-devsecops
 
 A Claude Code plugin for **LSCS DevSecOps work** (dlsu-lscs): DevSecOps engineers and the DevSecOps tickets they're assigned, such as CI/CD workflows, Dockerfiles and Compose files, branch protection and rulesets, secrets and repository setup. It gives Claude three things:
 - the org's contribution rules;
@@ -22,7 +22,7 @@ A Claude Code plugin for **LSCS DevSecOps work** (dlsu-lscs): DevSecOps engineer
 ## Install
 In Claude Code, in the folder where you work (your notes repo, or a product repo):
 ```
-/plugin marketplace add Enzo-user/lscs-claude
+/plugin marketplace add Enzo-user/lscs-devsecops
 /plugin install lscs-devops@lscs --scope project
 ```
 Project scope keeps the rules out of your non-LSCS projects. Start a new session (or run `/reload-plugins`). To check it loaded, ask Claude "what are the LSCS tiers?": it should answer without reading any files.
