@@ -22,44 +22,9 @@ A Claude Code plugin for **LSCS DevSecOps work** (dlsu-lscs): DevSecOps engineer
 ## How it works: the session loop
 Each session starts with `start` and ends with `end`. A ticket goes around the loop until every acceptance criterion is proven. A PR waiting on review just carries over: the next session's `start` picks it up.
 
-```mermaid
-flowchart TD
-    START["<b>/lscs-devsecops:start</b><br/>read HANDOFF · scan your tickets<br/>check your PRs · rank the queue"]
-    PICK{"A ticket<br/>can start?"}
-    WORK["<b>Work the ticket</b><br/>diagnose · draft · test locally<br/>(conventions load by themselves)"]
-    PROP["<b>/lscs-devsecops:pr</b><br/>pre-push check · PR proposal"]
-    OK1{{"Your OK"}}
-    OPEN["Push the branch · open the PR<br/>request reviewers"]
-    REV{"Team review"}
-    MERGE_P["<b>Merge proposal</b><br/>method · approver · head SHA · exact message"]
-    OK2{{"Your OK"}}
-    MERGE["Merge<br/>(or the reviewer merges)"]
-    CLOSE["<b>/lscs-devsecops:close</b><br/>test every criterion live<br/>evidence · close · test report"]
-    END["<b>/lscs-devsecops:end</b><br/>HANDOFF · ticket notes<br/>PR brief · commit the notes"]
+![The session loop: start, work the ticket, pr proposal (your OK), team review, merge (your OK), close, end, then back to start next session. Changes requested or a failed criterion go back to work; a PR waiting on review carries over to the next session.](assets/session-loop.svg)
 
-    START --> PICK
-    PICK -- yes --> WORK
-    PICK -- "no: waiting on someone" --> END
-    WORK --> PROP --> OK1
-    OK1 -- "change it" --> WORK
-    OK1 -- yes --> OPEN --> REV
-    REV -- "changes requested" --> WORK
-    REV -- "no review yet" --> END
-    REV -- approved --> MERGE_P --> OK2
-    OK2 -- yes --> MERGE --> CLOSE
-    CLOSE -- "a criterion fails" --> WORK
-    CLOSE -- "all proven" --> END
-    END -. "next session" .-> START
-
-    classDef cmd fill:#ddf4ff,stroke:#0969da,color:#1f2328
-    classDef you fill:#fff8c5,stroke:#9a6700,color:#1f2328
-    classDef team fill:#dafbe1,stroke:#1a7f37,color:#1f2328
-    class START,PROP,CLOSE,END cmd
-    class OK1,OK2 you
-    class REV team
-```
-
-Blue: plugin commands. Yellow: you decide; nothing is pushed, merged or posted for you without it. Green: your reviewers. The safety rules apply at every step, whether or not a command is running.
+Nothing is pushed, merged or posted for you without your OK, and the safety rules apply whether or not a command is running.
 
 ## See it work
 One real ticket, from intake to closed, in the public demo repo [Enzo-user/lscs-devsecops-demo](https://github.com/Enzo-user/lscs-devsecops-demo), recorded on 2026-10-13. Terminal images are recorded Claude Code runs with only this plugin loaded, drawn as a terminal (long local paths shortened). GitHub images are screenshots of the real pages. They were recorded with v0.1, when the plugin was still named `lscs-devops`, so they show `/lscs-devops:…` where the commands are now `/lscs-devsecops:…`.

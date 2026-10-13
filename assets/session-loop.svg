@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 350" width="840" height="350" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title>The lscs-devsecops session loop</title>
+  <desc>start, work the ticket, pr proposal (your OK), team review, merge (your OK), close, end, then back to start next session. Changes requested or a failed criterion go back to work; a PR waiting on review carries over to the next session.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    .t { font-size: 12.5px; font-weight: 700; fill: #1f2328; }
+    .s { font-size: 11px; fill: #424a53; }
+    .l { font-size: 11px; fill: #57606a; }
+    .n { font-size: 12px; fill: #1f2328; }
+    .cmd { fill: #ddf4ff; stroke: #0969da; }
+    .act { fill: #f6f8fa; stroke: #8c959f; }
+    .team { fill: #dafbe1; stroke: #1a7f37; }
+    .you { fill: #fff8c5; stroke: #9a6700; }
+    .ln { stroke: #57606a; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+  </style>
+
+  <rect x="0.5" y="0.5" width="839" height="349" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- top row, left to right -->
+  <rect class="cmd" x="40" y="40" width="160" height="64" rx="10"/>
+  <text class="t" x="120" y="66" text-anchor="middle">/lscs-devsecops:start</text>
+  <text class="s" x="120" y="85" text-anchor="middle">scan tickets · check PRs</text>
+
+  <rect class="act" x="240" y="40" width="160" height="64" rx="10"/>
+  <text class="t" x="320" y="66" text-anchor="middle">Work the ticket</text>
+  <text class="s" x="320" y="85" text-anchor="middle">draft · test locally</text>
+
+  <rect class="cmd" x="440" y="40" width="160" height="64" rx="10"/>
+  <text class="t" x="520" y="66" text-anchor="middle">/lscs-devsecops:pr</text>
+  <text class="s" x="520" y="85" text-anchor="middle">pre-push check · proposal</text>
+  <rect class="you" x="553" y="29" width="58" height="20" rx="10"/>
+  <text class="s" x="582" y="43" text-anchor="middle" font-weight="700">your OK</text>
+
+  <rect class="team" x="640" y="40" width="160" height="64" rx="10"/>
+  <text class="t" x="720" y="66" text-anchor="middle">Team review</text>
+  <text class="s" x="720" y="85" text-anchor="middle">approve or ask for changes</text>
+
+  <!-- bottom row, right to left -->
+  <rect class="act" x="640" y="230" width="160" height="64" rx="10"/>
+  <text class="t" x="720" y="256" text-anchor="middle">Merge</text>
+  <text class="s" x="720" y="275" text-anchor="middle">after the merge proposal</text>
+  <rect class="you" x="753" y="219" width="58" height="20" rx="10"/>
+  <text class="s" x="782" y="233" text-anchor="middle" font-weight="700">your OK</text>
+
+  <rect class="cmd" x="440" y="230" width="160" height="64" rx="10"/>
+  <text class="t" x="520" y="256" text-anchor="middle">/lscs-devsecops:close</text>
+  <text class="s" x="520" y="275" text-anchor="middle">test every criterion live</text>
+
+  <rect class="cmd" x="240" y="230" width="160" height="64" rx="10"/>
+  <text class="t" x="320" y="256" text-anchor="middle">/lscs-devsecops:end</text>
+  <text class="s" x="320" y="275" text-anchor="middle">notes · PR brief · commit</text>
+
+  <!-- the loop -->
+  <path class="ln" d="M200,72 H238"/>
+  <path class="ln" d="M400,72 H438"/>
+  <path class="ln" d="M600,72 H638"/>
+  <path class="ln" d="M720,104 V228"/>
+  <text class="l" x="728" y="170">approved</text>
+  <path class="ln" d="M640,262 H602"/>
+  <path class="ln" d="M440,262 H402"/>
+  <path class="ln" d="M240,262 H130 Q120,262 120,252 V106"/>
+  <text class="l" x="128" y="182">next session</text>
+
+  <!-- side loops -->
+  <text class="n" x="420" y="152" text-anchor="middle">↺ Changes requested, or a criterion fails at close: back to <tspan font-weight="700">Work</tspan>.</text>
+  <text class="n" x="420" y="174" text-anchor="middle">⏸ Waiting on a review: <tspan font-weight="700">end</tspan> the session; the next <tspan font-weight="700">start</tspan> picks it up.</text>
+
+  <!-- legend -->
+  <rect class="cmd" x="40" y="318" width="12" height="12" rx="3"/>
+  <text class="l" x="58" y="328">plugin command</text>
+  <rect class="you" x="160" y="318" width="12" height="12" rx="3"/>
+  <text class="l" x="178" y="328">you decide</text>
+  <rect class="team" x="262" y="318" width="12" height="12" rx="3"/>
+  <text class="l" x="280" y="328">your reviewers</text>
+  <text class="l" x="800" y="328" text-anchor="end">The safety rules apply at every step.</text>
+</svg>
