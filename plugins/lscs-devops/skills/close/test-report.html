@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Template for /lscs-devops:close. Replace every <…> placeholder; delete what doesn't apply.
+     Copy one <section> per ticket. Screenshots: relative paths next to this file in evidence/. -->
+<title><Project> — <REPO> #<N> test report</title>
+<style>
+  @page { size: A4; margin: 15mm; }
+  body { font: 11pt/1.45 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2328; max-width: 180mm; margin: 0 auto; padding: 12px; }
+  h1 { font-size: 20pt; margin: 0 0 4px; }
+  h2 { font-size: 15pt; margin: 0 0 6px; padding-top: 6px; border-top: 2px solid #1f2328; }
+  h3 { font-size: 11.5pt; margin: 14px 0 4px; }
+  p, li { margin: 4px 0; }
+  .meta { color: #59636e; font-size: 10pt; }
+  table { border-collapse: collapse; width: 100%; font-size: 10pt; margin: 6px 0 10px; }
+  th, td { border: 1px solid #d1d9e0; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; }
+  .pass { color: #1a7f37; font-weight: 600; white-space: nowrap; }
+  .fail { color: #d1242f; font-weight: 600; white-space: nowrap; }
+  .note { color: #9a6700; font-weight: 600; white-space: nowrap; }
+  code { font: 9.5pt/1.3 Consolas, "SFMono-Regular", Menlo, monospace; background: #f6f8fa; padding: 1px 4px; border-radius: 4px; }
+  figure { margin: 10px 0 14px; break-inside: avoid; page-break-inside: avoid; }
+  figure img { width: 100%; height: auto; border: 1px solid #d1d9e0; display: block; }
+  figcaption { font-size: 9.5pt; color: #59636e; margin-top: 4px; }
+  section { break-before: page; page-break-before: always; }
+  section.first { break-before: auto; page-break-before: auto; }
+  a { color: #0969da; text-decoration: none; word-break: break-all; }
+</style>
+</head>
+<body>
+
+<h1><Project> — <REPO> #<N> test report</h1>
+<p class="meta">Repo <strong><owner/repo></strong> · Commit tested <code><full SHA></code> on <code><branch></code><br>
+Tested live on <strong><YYYY-MM-DD, HH:MM UTC></strong> · Verified by <strong><handle></strong> (assignee), with Claude Code running the checks</p>
+
+<h3>Summary</h3>
+<table>
+  <tr><th>Ticket</th><th>What it asked for</th><th>Result</th><th>Issue state</th></tr>
+  <tr><td><a href="<issue url>"><repo> #<N></a></td><td><one line></td><td class="pass">PASS</td><td>closed as completed, <YYYY-MM-DD></td></tr>
+</table>
+
+<h3>How the tests were run</h3>
+<ul>
+  <li><What was run, where, and what was looked at. Name anything temporary and that it was removed.></li>
+</ul>
+
+<h3>Things worth knowing</h3>
+<ul>
+  <li><Follow-ups, owners, expiry dates (token names only, never values), known limitations.></li>
+</ul>
+
+<section class="first">
+<h2><repo> #<N> — <title></h2>
+<p class="meta">Issue <a href="<issue url>"><owner/repo>#<N></a> · opened by <author> · assigned to <assignees> · PR <a href="<pr url>">#<PR></a> merged by <who> on <YYYY-MM-DD></p>
+
+<p><strong>What changed:</strong> <two or three plain sentences for a developer who wasn't there.></p>
+
+<table>
+  <tr><th>Criterion (from the ticket)</th><th>Result</th><th>How it was verified</th></tr>
+  <tr><td><criterion, verbatim></td><td class="pass">PASS</td><td><run URL / commit / API output, with date; one plain-language line></td></tr>
+</table>
+
+<figure>
+  <img src="<REPO>-<N>-<item>.png" alt="<what the screenshot shows>">
+  <figcaption><What this proves, in one sentence.></figcaption>
+</figure>
+</section>
+
+</body>
+</html>
